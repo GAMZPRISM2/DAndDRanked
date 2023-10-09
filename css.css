@@ -27,6 +27,13 @@ h1 {
     font-size: 13px;
 }
 
+#wordCount{
+    text-align: center;
+    color: black; /* Set the link color to black or your desired color */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+}
+
 #content-container {
     max-width: 800px; /* Adjust the max-width as needed */
     margin: 0 auto; /* Center horizontally */
