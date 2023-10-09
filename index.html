@@ -25,7 +25,8 @@
         <a id="camref" href="https://au.pcmag.com/cars-auto/85235/2021-toyota-mirai-xle"><strong>Image Credits:</strong> <span class="superscript">PCMag Australia</span></a>
     </div>
     <p id="one">Rory Perren</p>
-    <p id="two">11 min read</p>
+    <p id="wordCount"></p>
+    <p id="two"></p>
     <div id="content-container">
         <div id="content-box">
             <p id="blog">
@@ -42,6 +43,24 @@
                 Whereas electric cars will be used in more urban areas where people do not need to carry lots of weight, drive particularly fast or have much longer range and don’t mind the charging time that comes with lithium-ion batteries as well as being prepared to pay the cost to replace the batteries in the car every 3 – 10 years.
                 So if Hydrogen has so little drawbacks why is it still in its infancy? This is simply due to the lack of infrastructure and the cost to build Hydrogen fuelling stations. Unlike regular fuelling stations which cost 90k – 3.5 million, Hydrogen stations typically start at 2 million at the low end, and for this reason and the lack of Hydrogen cars on the road companies find it hard to justify the investment, currently in Australia there are only 4 Hydrogen refuelling stations all of which are on the east coast, I believe that with adequate investment and the use of sodium hydride crystals that are either converted to Hydrogen at the station, or in the car itself, in future (particularly because Australia is so truck dependent) as Hydrogen trucks become more common trucking companies and fuel suppliers such as Shell and BP would have an incentive to build the infrastructure for the transport of hydrogen and the stations themselves. <br> <br>
             </p>
+            <script>
+                function countWords(str) {
+                    return str.split(/\s+/).filter(Boolean).length;
+                }
+                
+                function calculateReadingTime(words) {
+                    const wordsPerMinute = 200;
+                    const minutes = words / wordsPerMinute;
+                    return Math.ceil(minutes);
+                }
+                
+                const blogParagraph = document.getElementById("blog");
+                const paragraphText = blogParagraph.textContent;
+                const wordCount = countWords(paragraphText);
+                const readingTime = calculateReadingTime(wordCount);
+                document.getElementById("wordCount").textContent = `Word Count: ${wordCount}`;
+                document.getElementById("two").textContent = `${readingTime} min read`;
+                </script>
             <p id = "ref">References:</p>
             <div id = "ref2">
                 <a href="https://www.flaticon.com/free-icons/car" title="car icons">BZZRINCANTATION. (n.d.). Car icon. In Flaticon. Retrieved October 4, 2023, from https://www.flaticon.com/free-icons/car</a>
